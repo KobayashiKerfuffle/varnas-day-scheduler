@@ -35,7 +35,8 @@ $(function () {
     const timeBlock = $(this).parent().attr("id");
     const eventDescription = $(this).siblings(".description").val();
     localStorage.setItem(timeBlock, eventDescription);
-    $("#notification").text("Appointment Added to localStorage").show().delay(3000).fadeOut();
+    $("#notification").text("Appointment Added to localStorage \u2713").css("color", "green").show().delay(3000).fadeOut();
+
   });
 
   $(".time-block").each(function() {
