@@ -1,12 +1,22 @@
+/* Set the default font for the entire webpage to Open Sans and font size to 16 pixels */
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
 }
 
+/* Initially hide the notification element */
 #notification {
   display: none;
 }
 
+/* Define styles for all textarea elements on the page:
+   - Transparent background
+   - No visible borders
+   - Text resizing disabled
+   - Black text color
+   - A black left border
+   - Padding of 10 pixels all around
+*/
 textarea {
   background: transparent;
   border: none;
@@ -16,39 +26,65 @@ textarea {
   padding: 10px;
 }
 
+/* Allow text within the 'description' class to wrap and preserve whitespace */
 .description {
   white-space: pre-wrap;
 }
 
+/* Add rounded corners to the elements with the 'time-block' class */
 .time-block {
   border-radius: 15px;
 }
 
+/* Add a white top border to elements with the 'row' class */
 .row {
   border-top: 1px solid white;
 }
 
+/* Define styles for elements with the 'hour' class:
+   - White background
+   - Black text color
+   - A dashed black top border
+*/
 .hour {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
 }
 
+/* Define styles for elements indicating past time:
+   - Gray background
+   - White text color
+*/
 .past {
   background-color: #d3d3d3;
   color: white;
 }
 
+/* Define styles for elements indicating current time:
+   - Reddish background
+   - White text color
+*/
 .present {
   background-color: #ff6961;
   color: white;
 }
 
+/* Define styles for elements indicating future time:
+   - Green background
+   - White text color
+*/
 .future {
   background-color: #77dd77;
   color: white;
 }
 
+/* Define styles for the save button:
+   - A black left border
+   - Rounded right-side corners
+   - A blue background
+   - White text color
+*/
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
@@ -57,6 +93,10 @@ textarea {
   color: white;
 }
 
+/* Add a hover effect to icons within the save button:
+   - Enlarge the icon to 20 pixels when hovered
+   - Smooth transition of 0.3 seconds for the effect
+*/
 .saveBtn i:hover {
   font-size: 20px;
   transition: all 0.3s ease-in-out;
