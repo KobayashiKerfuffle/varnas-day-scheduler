@@ -1,6 +1,17 @@
 $(function () {
+
+  function getOrdinal(n) {
+    if (n > 3 && n < 21) return 'th';
+    switch (n % 10) {
+      case 1:  return 'st';
+      case 2:  return 'nd';
+      case 3:  return 'rd';
+      default: return 'th';
+    }
+  }
   // Step 1: Display the current date
-  const currentDate = dayjs().format('MMMM D, YYYY');
+  const day = dayjs().date();
+  const currentDate = dayjs().format('dddd, MMMM D') + getOrdinal(day);
   $("#currentDay").text(currentDate);
 
   // Step 2: Add time-block classes
